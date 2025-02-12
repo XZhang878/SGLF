@@ -14,6 +14,10 @@ Cross-Modality Domain Adaptation Based on Semantic Graph Learning: From Optical 
 - argparse
 - PIL
 
+## Dataset
+The NWPU-SAR6 dataset is uploaded to：https://pan.baidu.com/s/19bmupjpqYGUbQZcq3UUFcQ (Verification code: upvm)
+The WHU-SAR6 dataset is uploaded to：: https://pan.baidu.com/s/1MspN949OC1mGyoLkEqfbpg (Verification code: rqrt) 
+
 ## Training
 Please use the following commands for different tasks. 
 
