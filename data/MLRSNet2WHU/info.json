@@ -1,0 +1,10 @@
+{
+  "classes":6,
+  "label":[
+    "bridge",
+    "building",
+    "farmland",
+    "lake",
+    "mountain",
+    "river"]
+}
