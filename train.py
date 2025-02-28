@@ -87,7 +87,7 @@ def image_classification_test(loader, G, F, test_10crop=True):
     _, predict = torch.max(all_output, 1)
 
     accuracy = torch.sum(torch.squeeze(predict).float() == all_label).item() / float(all_label.size()[0])
-    with open(join('/data2/yaoxiwen4/home/disk1/code_1/SGLF/data/MLRSNet2WHU/info.json'), 'r') as fp:
+    with open(join('./data/MLRSNet2WHU/info.json'), 'r') as fp:
         info = json.load(fp)
     name_classes = np.array(info['label'], dtype=np.str)
     num_classes = np.int(info['classes'])
@@ -410,13 +410,13 @@ if __name__ == "__main__":
                                  "VGG16", "VGG19", "VGG11BN", "VGG13BN", "VGG16BN", "VGG19BN", "AlexNet"])
     parser.add_argument('--dset', type=str, default='office', choices=['office', 'image-clef', 'visda', 'office-home'],
                         help="The dataset or source dataset used")
-    parser.add_argument('--s_dset_path', type=str, default='/data2/yaoxiwen4/home/disk1/code_1/SGLF/data/MLRSNet2WHU/source_MLRSNet.txt',
+    parser.add_argument('--s_dset_path', type=str, default='./data/MLRSNet2WHU/source_MLRSNet.txt',
                         help="The source dataset path list")
-    parser.add_argument('--t_dset_path', type=str, default='/data2/yaoxiwen4/home/disk1/code_1/SGLF/data_rs/MLRSNet2WHU/target_WHU-SAR.txt',
+    parser.add_argument('--t_dset_path', type=str, default='./MLRSNet2WHU/target_WHU-SAR.txt',
                         help="The target dataset path list")
     parser.add_argument('--test_interval', type=int, default=500, help="interval of two continuous test phase")
     parser.add_argument('--snapshot_interval', type=int, default=500, help="interval of two continuous output model")
-    parser.add_argument('--output_dir', type=str, default='/data2/yaoxiwen4/home/disk1/code_1/SGLF/MLRSNet2WHU',
+    parser.add_argument('--output_dir', type=str, default='./SGLF/MLRSNet2WHU',
                         help="output directory of our model (in ../snapshot directory)")
     parser.add_argument('--lr', type=float, default=0.001, help="learning rate")
     parser.add_argument('--random', type=bool, default=False, help="whether use random projection")
